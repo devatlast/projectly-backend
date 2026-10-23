@@ -42,9 +42,10 @@ export class AuthController {
    const result = await this.authService.login(loginDto);
    response.cookie('access_token', result.access_token, {
     httpOnly: true,
-    secure: false,
-    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
     maxAge: 60 * 60 * 1000,
+    path: '/'
    });
    return {
     message: 'Login successful'

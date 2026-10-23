@@ -235,5 +235,4 @@ Security Notes
 * Verify that protected endpoints require the appropriate authentication.
 
 License
-
-No license has been specified yet.
+Rotimi Olawale
