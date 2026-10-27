@@ -9,7 +9,11 @@ async function bootstrap() {
   app.use(cookieParser());
 
   app.enableCors({
-    origin: 'http://localhost:3002',
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:3002',
+      'https://projectlycom.vercel.app/'
+    ],
     credentials: true
   });
 
