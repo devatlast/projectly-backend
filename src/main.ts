@@ -12,7 +12,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:3000',
       'http://localhost:3002',
-      'https://projectlycom.vercel.app/'
+      'https://projectlycom.vercel.app'
     ],
     credentials: true
   });
